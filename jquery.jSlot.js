@@ -41,6 +41,7 @@
             onStart : $.noop,    // Function: runs on spin start,
             onEnd : $.noop,      // Function: run on spin end. It is passed (finalNumbers:Array). finalNumbers gives the index of the li each slot stopped on in order.
             time : 7000,         // Number: total time of spin animation
+            easing : 'linear',    // String: easing type for final spin
             loops : 6            // Number: times it will spin during the animation
         };
 
@@ -162,8 +163,8 @@
 
                 that.$el
                     .css( 'top', -base.listHeight )
-                    .animate( {'top': finalPos}, finalSpeed, function() {
-                         if ( $.isFunction( base.options.onEnd ) ) {
+                    .animate( {'top': finalPos}, finalSpeed, base.options.easing, function() {
+                        if($.isFunction( base.options.onEnd ) ) {
                             base.options.onEnd(endNum);
                         }
                     });
