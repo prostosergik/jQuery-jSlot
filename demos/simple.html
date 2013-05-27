@@ -13,7 +13,7 @@ ul {
     list-style: none;
 }
 
-.jSlots-wrapper {
+.jSlot-wrapper {
     overflow: hidden;
     height: 20px;
     display: inline-block; /* to size correctly, can use float too, or width*/
@@ -32,26 +32,35 @@ ul {
 <body>
 
     <ul class="slot">
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-        <li>4</li>
-        <li>5</li>
-        <li>6</li>
-        <li>7</li>
+        <li>Hello</li>
+        <li>Lorem</li>
+        <li>Ipsum</li>
+        <li>Dolor</li>
+        <li>Sit</li>
+        <li>Amet</li>
+        <li>Verygood</li>
     </ul>
     <input type="button" id="playNormal" value="play">
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
     <script src="../jquery.easing.1.3.js" type="text/javascript" charset="utf-8"></script>
-    <script src="../jquery.jSlots.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../jquery.jSlots.js" type="text/javascript" charset="utf-8"></script>
     <script type="text/javascript" charset="utf-8">
-        
-        // normal example
-        $('.slot').jSlots({
-            spinner : '#playNormal',
-            winnerNumber : 7
+       
+    var slots;
+
+    $(function(){
+        slot = $('.slot').jSlot({
+                onEnd: function(num){
+                    console.log(num);
+                }
         });
+        
+        $('#playNormal').click(function(){   
+            slot.playSlot();
+        });
+    }); 
+       
   
     </script>
     
