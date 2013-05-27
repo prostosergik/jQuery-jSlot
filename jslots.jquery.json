@@ -1,22 +1,18 @@
 {
-    "name": "jslots",
-    "title": "jQuery jSlots",
-    "description": "jSlots is 2k of jQuery slot machine magic. It turns any list (&lt;ol&gt; or &lt;ul&gt;) into a slot machine!",
+    "name": "jslot",
+    "title": "jQuery jSlot",
+    "description": "jSlot is a clone of jSlots (https://github.com/matthewlein/jQuery-jSlots) plugin, but slightly adapted for one element as slot container.",
     "keywords": [
         "slots",
-        "gambling",
-        "lists",
-        "fun",
-        "zany",
-        "winning"
+        "lists"
     ],
-    "version": "1.0.3",
+    "version": "1.0.3.0.1",
     "dependencies": {
         "jquery": ">=1.4.1"
     },
     "author": {
-        "name": "Matthew Lein",
-        "url": "http://matthewlein.com/"
+        "name": "Serge Liskovsky",
+        "url": "http://github.com/prostosergik"
     },
     "licenses": [
         {
@@ -27,10 +23,5 @@
             "type": "GPL",
             "url": "http://www.gnu.org/licenses/gpl.html"
         }
-    ],
-
-    "bugs": "https://github.com/matthewlein/jQuery-jSlots/issues",
-    "homepage": "http://matthewlein.com/experiments/slots.html",
-    "docs": "http://matthewlein.com/experiments/slots.html",
-    "download": "https://github.com/matthewlein/jQuery-jSlots"
+    ]
 }
